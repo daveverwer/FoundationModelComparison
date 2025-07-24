@@ -25,4 +25,5 @@ The full write-up of this experiment is available in [iOS Dev Weekly - Issue 719
 ## Notes:
 
 ¹ Claude Sonnet 4 consistently ignored the word limit, averaging around double what was requested.
+
 ² Gemini 2.5 Flash ignored the single paragraph requirement, and _also_ the word limit. 😬
