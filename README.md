@@ -6,6 +6,10 @@
 - [Full Results](#full-results)
 - [Prompt](#prompt)
 
+---
+
+## Introduction
+
 This repository contains the results of an experiment which aims to evaluate the performance of Apple’s [Foundation Model](https://developer.apple.com/documentation/foundationmodels) (available in iOS 26, macOS 26, watchOS 26, tvOS 26, and visionOS 26) against comparably sized open-source models running in [LM Studio](https://lmstudio.ai/) and popular hosted LLM services (which are _far_ larger and should be more capable).
 
 The prompt is a text summarisation task. It requires the model to condense a lengthy journal entry into a single paragraph under 50 words, written in first person without meta-commentary.
@@ -14,7 +18,7 @@ The prompt is designed to be a real-world test of a prompt that might be useful 
 
 The full write-up of this experiment is available in [iOS Dev Weekly - Issue 719](https://iosdevweekly.com/issues/719/#start).
 
-# Result Summary
+## Result Summary
 
 | Model                               | Word Count | Rating |
 | ----------------------------------- | ---------- | ------ |
@@ -28,15 +32,14 @@ The full write-up of this experiment is available in [iOS Dev Weekly - Issue 719
 | OpenAI - ChatGPT o3                 | 47         | 🟢     |
 | OpenAI - ChatGPT o4-mini            | 45         | 🟢     |
 
-## Notes:
+**Notes:**
 
-¹ Claude Sonnet 4 consistently ignored the word limit, often going over 80 characters.
+1. Claude Sonnet 4 consistently ignored the word limit, often going over 80 characters.
+2. Gemini 2.5 Flash ignored the single paragraph requirement, and _also_ the word limit. 😬
 
-² Gemini 2.5 Flash ignored the single paragraph requirement, and _also_ the word limit. 😬
+## Full Results
 
-# Full Results
-
-## Anthropic - Claude Sonnet 4
+### Anthropic - Claude Sonnet 4
 
 ```
 I woke late and spent the morning reading my Spanish book about Rome at the
@@ -48,7 +51,7 @@ celebrations throughout London with bonfires, bell-ringing, and people roasting
 "rumps" in the streets before I returned home with my wife.
 ```
 
-## Apple - Foundation Model
+### Apple - Foundation Model
 
 ```
 I spent the day at my office reading and then went to a meeting with colleagues,
@@ -57,7 +60,7 @@ Temple Bar, and met friends in the city. The streets were filled with bonfires
 and celebrations as we returned home.
 ```
 
-## Google - Gemini 2.5 Flash
+### Google - Gemini 2.5 Flash
 
 ```
 I read in my office, then learned of Monk's letter and dined with Mr. Chetwind.
@@ -72,7 +75,7 @@ bonfires, bells, and celebrations, which I enjoyed with my wife before heading
 to bed.
 ```
 
-## Google - Gemini 2.5 Pro
+### Google - Gemini 2.5 Pro
 
 ```
 This morning I read my Spanish book before heading into the city. I dined with
@@ -81,7 +84,7 @@ with celebratory bells and bonfires everywhere. I wrote some letters and later
 showed the amazing fires to my wife.
 ```
 
-## LM Studio - gemma-3n-e4b-it-mlx
+### LM Studio - gemma-3n-e4b-it-mlx
 
 ```
 I spent the day traveling between offices, meeting with friends, and observing
@@ -92,7 +95,7 @@ letters throughout the day, eventually returning home with my wife after
 witnessing the extraordinary displays of public celebration.
 ```
 
-## LM Studio - qwen2.5-3b-instruct-mlx
+### LM Studio - qwen2.5-3b-instruct-mlx
 
 ```
 Today, I slept late then went to my office where I read Spanish. In the Hall,
@@ -103,7 +106,7 @@ triggered a joyous response from the crowd. We dined further at various taverns
 and witnessed numerous bonfires along our journey home.
 ```
 
-## OpenAI - ChatGPT 4o
+### OpenAI - ChatGPT 4o
 
 ```
 I spent the day reading, visiting Westminster Hall, and joining Chetwind on a
@@ -112,7 +115,7 @@ General Monk’s letter to Parliament. The day ended with widespread celebration
 bonfires, and public joy, which I shared with my wife before heading to bed.
 ```
 
-## OpenAI - ChatGPT o3
+### OpenAI - ChatGPT o3
 
 ```
 I lingered in bed, studied my Spanish book, visited Westminster Hall to witness
@@ -121,7 +124,7 @@ cheering crowds to Guildhall, drank at several taverns, wrote letters, then
 walked amid jubilant bonfires with my wife before posting mail and retiring.
 ```
 
-## OpenAI - ChatGPT o4-mini
+### OpenAI - ChatGPT o4-mini
 
 ```
 I read my Spanish book, walked to the Hall to hear Monk’s letter, dined with
@@ -130,7 +133,7 @@ return at Guildhall, wrote letters and dined again, and wandered home with my
 wife amid London’s bonfires and celebrations.
 ```
 
-# Prompt
+## Prompt
 
 ```
 The text below is an entire journal entry for a person's day. Please summarise
