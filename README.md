@@ -1,5 +1,11 @@
 # Foundation Model Comparison
 
+## Table of Contents
+
+- [Result Summary](#result-summary)
+- [Full Results](#full-results)
+- [Prompt](#prompt)
+
 This repository contains the results of an experiment which aims to evaluate the performance of Apple’s [Foundation Model](https://developer.apple.com/documentation/foundationmodels) (available in iOS 26, macOS 26, watchOS 26, tvOS 26, and visionOS 26) against comparably sized open-source models running in [LM Studio](https://lmstudio.ai/) and popular hosted LLM services (which are _far_ larger and should be more capable).
 
 The prompt is a text summarisation task. It requires the model to condense a lengthy journal entry into a single paragraph under 50 words, written in first person without meta-commentary.
