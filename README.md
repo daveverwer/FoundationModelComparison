@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+- [Introduction](#introduction)
 - [Result Summary](#result-summary)
 - [Full Results](#full-results)
 - [Prompt](#prompt)
